@@ -1,0 +1,70 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
+import { useState } from "react";
+import { logo } from "./assets/";
+import { search } from "./assets/index";
+import Search from "./pages/Search";
+import SidebarNavbar from "./components/Sidebar";
+import Home from "./pages/Home";
+import CreatePost from "./pages/CreatePost";
+
+import { BsGithub, BsInstagram } from "react-icons/bs";
+import SearchBar from "./components/searchBar";
+
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import NavBar from "./components/NavBar";
+const App = () => {
+  const [showNav, SetShowNav] = useState(false);
+
+  const handleIconClick = () => {
+    SetShowNav(!showNav);
+  };
+  return (
+    <BrowserRouter>
+      <div className="w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4]">
+<SearchBar/>
+      </div>
+      <header className="w-full  flex flex-wrap justify-between items-center bg-gray-600 py-6 px-10 sm:px-8 px-8 py-4 border-b border-b-[#e6ebf4]">
+        <div className="w-full md:w-auto flex items-center md:items-start md:justify-start mb-4 md:mb-0">
+          <div className="flex items-center">
+            <div className="mr-4 md:mr-8">
+              {/* <GiHamburgerMenu size={24} onClick={handleIconClick}/> */}
+              <SidebarNavbar/>
+            </div>
+          </div>
+        </div>
+        <div className="w-full md:w-auto text-center md:text-left mb-4 md:mb-0 font-serif">
+          <h1 className="text-sm font-bold  text-white">PIXELLNOVATE</h1>
+        </div>
+
+        <div className="flex items-center">
+          <div className="mr-4 md:mr-8">
+            <Link
+              className="w-full md:w-auto flex justify-end"
+              to="https://github.com/AyushAnkit15/Pixellnovate"
+            >
+              <BsGithub size={24} />
+              {/* <img src={''}   className='w-10 object-contain' /> */}
+            </Link>
+          </div>
+
+          <div>
+            <Link to="https://www.instagram.com/shiv__kush/">
+              <BsInstagram size={24} />
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      <main className="sm:p-8 px-4 py-8 w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create-post" element={<CreatePost />} />
+          <Route path="/search" element={<Search />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
+  );
+};
+
+export default App;
