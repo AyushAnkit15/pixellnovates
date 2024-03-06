@@ -30,7 +30,7 @@ dallerouter.post('/' , async (req , res)=>{
             response_format : 'b64_json'  
         })
 
-        const image = aiResponse.data[0].b64_json;  
+        const image = aiResponse.data.data[0].b64_json;  
 
         res.status(200).json({photo:image}) ;  
 
