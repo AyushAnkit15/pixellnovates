@@ -13,7 +13,7 @@ import { slideAnimation ,headContainerAnimation , fadeAnimation , headTextAnimat
 import Montserrat from '../Montserrat-Bold.ttf'
 const HomePage = () => {
   return (
-    <motion.div className="flex flex-row flex-col lg:space-x-4 ">
+    <motion.div className="flex flex-col lg:space-x-4 ">
       {/* <div className="w-full lg:w-1/3 lg:mr-4 mb-4 lg:mb-0">
 
     </div> */}
@@ -49,7 +49,7 @@ const HomePage = () => {
             Start with a prompt from our gallery of inspirational examples.
           </Typography>
         </div>
-        <div className="cards flex lg:gap-20  sm:gap-10 flex row  mt-20">
+        <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3">
           {/* <!-- Your cards content here --> */}
           {data.map(({ id, prompt, img }) => (
             <Cards key={id} prompt={prompt} img={img} />
@@ -76,7 +76,7 @@ const HomePage = () => {
           A look at what we’re dreaming up.
         </Typography>
       </div>
-      <div className="cards flex lg:gap-20  sm:gap-10 flex row  mt-5">
+      <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3">
         {/* <!-- Your cards content here --> */}
         {data2.map(({ id, prompt, img }) => (
           <Cards  isFooterBlurred key={id} prompt={prompt} img={img} />

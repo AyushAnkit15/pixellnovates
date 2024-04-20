@@ -16,7 +16,7 @@ export function FooterWithLogo() {
           <li>
             <Typography
               as="a"
-              href="https://www.linkedin.com/in/shivam-kumar-a82a06265/"
+              href="https://www.linkedin.com/in/ayush-ankit-0536091bb/"
               color="blue-gray"
               className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
             >
@@ -46,7 +46,7 @@ export function FooterWithLogo() {
           <li>
             <Typography
               as="a"
-              href="https://www.instagram.com/shiv__kush/"
+              href="https://www.instagram.com/a_ayush15/"
               color="blue-gray"
               className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
             >
